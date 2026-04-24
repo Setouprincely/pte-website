@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 
@@ -15,68 +15,96 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 20);
   }, []);
+
+  useEffect(() => {
+    handleScroll(); // Initial check
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md shadow-card" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#0a0f1e]/95 backdrop-blur-md shadow-xl border-b border-white/10"
+          : "bg-[#0a0f1e]"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-gold text-gold-foreground">
-            <GraduationCap className="h-5 w-5" />
-          </span>
-          <span className={scrolled ? "text-foreground" : "text-foreground"}>PTE Success Team</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+        {/* Logo - Premium Education Style */}
+        <Link
+          to="/"
+          className="flex items-center gap-3 group"
+        >
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 via-yellow-400 to-amber-500 shadow-lg shadow-amber-500/30 transition-transform group-hover:scale-105">
+            <GraduationCap className="h-6 w-6 text-[#0a0f1e]" />
+          </div>
+          <div className="font-display">
+            <span className="text-2xl font-bold tracking-tight text-white">PTE</span>
+            <span className="block -mt-1 text-[10px] font-medium tracking-[2px] text-amber-400/90 uppercase">Academic</span>
+          </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
+        {/* Desktop Navigation */}
+        <nav className="hidden items-center gap-9 md:flex">
+          {links.map((link) => (
             <Link
-              key={l.to}
-              to={l.to}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
-              activeProps={{ className: "text-foreground font-semibold" }}
+              key={link.to}
+              to={link.to}
+              className="text-sm font-medium text-white/80 transition-all hover:text-white hover:-translate-y-0.5 active:text-white"
+              activeProps={{
+                className: "text-white font-semibold relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-amber-400",
+              }}
             >
-              {l.label}
+              {link.label}
             </Link>
           ))}
         </nav>
 
+        {/* Desktop CTA */}
         <div className="hidden md:block">
-          <WhatsAppButton size="sm">WhatsApp</WhatsAppButton>
+          <WhatsAppButton 
+            size="sm" 
+            className="bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-6 py-2.5 rounded-full transition-all hover:shadow-lg hover:shadow-emerald-500/30"
+          >
+            Chat on WhatsApp
+          </WhatsAppButton>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden"
-          aria-label="Toggle menu"
+          onClick={() => setOpen((prev) => !prev)}
+          className="md:hidden p-2 text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {open && (
-        <div className="border-t bg-background md:hidden">
-          <nav className="flex flex-col gap-1 px-6 py-4">
-            {links.map((l) => (
+        <div className="border-t border-white/10 bg-[#0a0f1e] md:hidden">
+          <nav className="flex flex-col px-6 py-8">
+            {links.map((link) => (
               <Link
-                key={l.to}
-                to={l.to}
+                key={link.to}
+                to={link.to}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium hover:bg-secondary"
+                className="py-4 text-lg font-medium text-white/90 hover:text-white border-b border-white/10 transition-colors last:border-none"
               >
-                {l.label}
+                {link.label}
               </Link>
             ))}
-            <div className="mt-2">
-              <WhatsAppButton size="sm" className="w-full">
+
+            <div className="mt-8">
+              <WhatsAppButton 
+                size="sm" 
+                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-3.5 rounded-2xl text-base"
+              >
                 Chat on WhatsApp
               </WhatsAppButton>
             </div>
