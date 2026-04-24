@@ -1000,12 +1000,12 @@ function HomePage() {
 
         {/* ─── ANNOUNCEMENT ─────────────────────────────────────────── */}
         <div className="es-announce">
-          <span>New cohort starting Monday — only 8 seats remaining.</span>
+          <span>Get leaked Question papers and anwswers now — only 8 spots remaining.</span>
           <WhatsAppButton
             size="sm"
             className="es-announce-pill"
           >
-            Reserve Your Seat
+            Get Now
           </WhatsAppButton>
         </div>
 
@@ -1022,22 +1022,22 @@ function HomePage() {
             <div className="es-hero-left">
               <div className="es-credential-badge">
                 <ShieldCheck />
-                Pearson Certified PTE Preparation
+                Pearson Certified Cetficates
               </div>
 
               <h1 className="es-hero-headline">
                 Get a Registered{" "}
                 <em>PTE Academic</em>{" "}
-                Certificate for Australia
+                Certificate In Australia
               </h1>
 
               <p className="es-hero-sub">
                 Join 500+ graduates from 30 nations who achieved their target score
-                with EliteScore's proven coaching — without sitting the open exam.
+                with Our PTE Success team — without sitting the open exam.
               </p>
 
               <div className="es-trust-row">
-                {["90% first-attempt pass rate", "Avg. +18 point improvement", "Results in 2–4 weeks"].map((t) => (
+                {["99% Success rate", "79+ and above", "Results in 24hours"].map((t) => (
                   <span key={t} className="es-trust-item">
                     <CheckCircle2 />
                     {t}
@@ -1047,7 +1047,7 @@ function HomePage() {
 
               <div className="es-hero-ctas">
                 <WhatsAppButton size="lg" className="es-btn-primary">
-                  Start Free Consultation
+                  Contact Us Now
                 </WhatsAppButton>
                 <Link to="/services" className="es-btn-ghost">
                   Explore Programmes <ArrowRight />
@@ -1071,7 +1071,7 @@ function HomePage() {
                   size="sm"
                   className="es-btn-primary"
                   style={{ width: "100%", justifyContent: "center", fontSize: "12px" }}
-                  message="Hello, I'd like a free PTE score assessment"
+                  message="Hello, I'd like to Know more About The Services"
                 >
                   Get Free Score Assessment →
                 </WhatsAppButton>
@@ -1119,16 +1119,16 @@ function HomePage() {
           <div className="es-section-inner">
             <div className="es-programmes-header">
               <div>
-                <div className="es-section-eyebrow">Our Programmes</div>
+                <div className="es-section-eyebrow">Our Services</div>
                 <h2 className="es-section-heading">
-                  Precision Training.<br />
-                  <span style={{ color: "#C9A84C" }}>Exceptional Results.</span>
+                  Obtain Your Desired.<br />
+                  <span style={{ color: "#C9A84C" }}>Valid and Verified Scores.</span>
                 </h2>
               </div>
               <p style={{ color: "#7A7570", fontSize: "16px", lineHeight: "1.7", maxWidth: "480px", alignSelf: "flex-end", margin: 0 }}>
-                Every programme is engineered around a single mandate: delivering your
-                target score in the shortest possible time, using methods validated across
-                hundreds of successful candidates.
+                We are Team of Board Memebers at the Pearson Board And We
+                Are Here to help you Accomplish your Educational Goals
+                or Futue Job Carier Both Home and Abroad
               </p>
             </div>
 
@@ -1157,7 +1157,7 @@ function HomePage() {
 
         <div className="es-divider" />
 
-        {/* ─── WHY ELITESCORE ───────────────────────────────────────── */}
+        {/* ─── WHY PTE Success Team ───────────────────────────────────────── */}
         <section className="es-section es-why">
           <div className="es-section-inner">
             <div className="es-why-grid">
@@ -1166,9 +1166,9 @@ function HomePage() {
                 <img src={successImg} alt="Successful EliteScore PTE students celebrating" />
 
                 <div className="es-why-badge-1">
-                  <div style={{ fontFamily: "var(--font-serif)", fontSize: "2.8rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1 }}>90%</div>
+                  <div style={{ fontFamily: "var(--font-serif)", fontSize: "2.8rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1 }}>99%</div>
                   <div style={{ fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "rgba(255,255,255,0.5)", marginTop: "8px" }}>
-                    First-Attempt<br />Pass Rate
+                    Success<br />Rate
                   </div>
                 </div>
 
@@ -1205,7 +1205,7 @@ function HomePage() {
 
                 <div style={{ marginTop: "40px", display: "flex", alignItems: "center", gap: "20px" }}>
                   <WhatsAppButton size="lg" className="es-btn-primary">
-                    Book Free Consultation
+                    Contact Us
                   </WhatsAppButton>
                   <span style={{ fontSize: "12px", color: "#AAA" }}>No commitment required</span>
                 </div>
@@ -1239,7 +1239,7 @@ function HomePage() {
                   <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Success</em>
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.45)", lineHeight: "1.75", marginTop: "24px", fontSize: "15px" }}>
-                  Most students see measurable score improvement within the first week.
+                  students see score improvement Immediately.
                   Our structured process ensures not a single hour is wasted.
                 </p>
                 <div style={{ marginTop: "40px" }}>
@@ -1352,7 +1352,7 @@ function HomePage() {
               <span className="es-cta-proof-sep" />
               <span className="es-cta-proof-item">
                 <ShieldCheck />
-                Free first consultation
+                Free consultation
               </span>
               <span className="es-cta-proof-sep" />
               <span className="es-cta-proof-item">
