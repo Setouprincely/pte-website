@@ -14,13 +14,26 @@ const links = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = useCallback(() => {
-    setScrolled(window.scrollY > 20);
-  }, []);
+    const currentScrollY = window.scrollY;
+
+    // Show background after scrolling a bit
+    setScrolled(currentScrollY > 20);
+
+    // Hide header when scrolling down, show when scrolling up
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      setHidden(true);   // Scroll down → hide
+    } else {
+      setHidden(false);  // Scroll up → show
+    }
+
+    setLastScrollY(currentScrollY);
+  }, [lastScrollY]);
 
   useEffect(() => {
-    handleScroll(); // Initial check
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
@@ -31,10 +44,10 @@ export function Header() {
         scrolled
           ? "bg-[#0a0f1e]/95 backdrop-blur-md shadow-xl border-b border-white/10"
           : "bg-[#0a0f1e]"
-      }`}
+      } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-        {/* Logo - Premium Education Style */}
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-3 group"
@@ -54,7 +67,7 @@ export function Header() {
             <Link
               key={link.to}
               to={link.to}
-              className="text-sm font-medium text-white/80 transition-all hover:text-white hover:-translate-y-0.5 active:text-white"
+              className="text-sm font-medium text-white/80 transition-all hover:text-white hover:-translate-y-0.5"
               activeProps={{
                 className: "text-white font-semibold relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:bg-amber-400",
               }}
@@ -64,7 +77,7 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
+        {/* Desktop WhatsApp */}
         <div className="hidden md:block">
           <WhatsAppButton 
             size="sm" 
