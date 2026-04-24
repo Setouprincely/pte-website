@@ -6,6 +6,14 @@ import {
   GraduationCap, TrendingUp, Zap, CheckCircle2,
   ArrowRight, ChevronRight,
 } from "lucide-react";
+import studyingImg from "@/assets/studying.jpg";
+import testScoreImg from "@/assets/test-score.jpg";
+import scoreOnLaptopImg from "@/assets/score-on-laptop-screen.jpg";
+import writingOnPaperImg from "@/assets/writing-on-paper.jpg";
+import viewingResultsImg from "@/assets/viewing-results-on-screen.jpg";
+import personWithFlagImg from "@/assets/person-with-flag.jpg";
+import immigrationImg from "@/assets/immigration.jpg";
+import countryFlagsImg from "@/assets/country-flags.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -29,6 +37,7 @@ const featured = [
     desc: "You can obtain a valid and verified PTE score cad for australia PR with your desired score, with or without the exams",
     tag: "Most Popular",
     highlight: true,
+    image: testScoreImg,
   },
   {
     icon: Target,
@@ -37,6 +46,7 @@ const featured = [
     desc: "You will have access to papers and answers for every upcoming exam date and center location once you are registered.",
     tag: "Highly Recommended",
     highlight: true,
+    image: scoreOnLaptopImg,
   },
 ];
 
@@ -46,36 +56,42 @@ const services = [
     label: "03",
     title: "Study Guides & Exam Strategies",
     desc: "Proven templates and techniques for every section. Learn how top scorers consistently achieve 79+.",
+    image: writingOnPaperImg,
   },
   {
     icon: GraduationCap,
     label: "04",
     title: "One-on-One Coaching",
     desc: "Personalized sessions with certified PTE experts delivering targeted feedback on all four skills.",
+    image: viewingResultsImg,
   },
   {
     icon: Users,
     label: "05",
     title: "Group Classes",
     desc: "High-energy live classes with peers working toward the same goal — affordable, structured, effective.",
+    image: personWithFlagImg,
   },
   {
     icon: TrendingUp,
     label: "06",
     title: "Score Improvement Plans",
     desc: "We analyze your existing scorecard and build a precision plan to boost your lowest-scoring sections.",
+    image: immigrationImg,
   },
   {
     icon: Zap,
     label: "07",
     title: "Express Preparation Programs",
     desc: "Need 79+ in two weeks? Our intensive express track is engineered for ambitious deadlines.",
+    image: studyingImg,
   },
   {
     icon: CheckCircle2,
     label: "08",
     title: "Score Guarantee Pathway",
     desc: "Long-term coaching with a clear roadmap, weekly progress reviews, and accountability to your target score.",
+    image: countryFlagsImg,
   },
 ];
 
@@ -121,6 +137,18 @@ const STYLES = `
       radial-gradient(ellipse 80% 60% at 70% 30%, rgba(201,168,76,0.07) 0%, transparent 60%),
       radial-gradient(ellipse 50% 80% at 10% 80%, rgba(201,168,76,0.05) 0%, transparent 55%),
       linear-gradient(170deg, #0d1326 0%, #0a0f1e 100%);
+  }
+  .es-hero-photo {
+    position: absolute;
+    inset: 0;
+    opacity: 0.24;
+  }
+  .es-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: grayscale(20%);
   }
   .es-hero-grid {
     position: absolute; inset: 0;
@@ -236,6 +264,19 @@ const STYLES = `
     padding: 0.3rem 0.75rem; border-radius: 2px;
     margin-bottom: 2rem; font-weight: 500;
   }
+  .es-card-image-wrap {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .es-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
   .es-card-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 5rem; font-weight: 400; color: rgba(201,168,76,0.08);
@@ -281,6 +322,10 @@ const STYLES = `
   }
   .es-grid-card:hover { background: var(--navy-light); }
   .es-grid-card .es-card-num { font-size: 3.5rem; top: 1rem; right: 1.5rem; }
+  .es-grid-card .es-card-image-wrap {
+    height: 160px;
+    margin-bottom: 1.2rem;
+  }
 
   /* divider */
   .es-divider {
@@ -376,6 +421,9 @@ function ServicesPage() {
         {/* ── HERO ── */}
         <section className="es-hero">
           <div className="es-hero-bg" />
+          <div className="es-hero-photo">
+            <img src={studyingImg} alt="Student preparing for the PTE exam" />
+          </div>
           <div className="es-hero-grid" />
 
           <div style={{ position: "relative", zIndex: 2 }}>
@@ -414,6 +462,9 @@ function ServicesPage() {
               <div className="es-featured-card" key={s.label}>
                 <span className="es-card-num">{s.label}</span>
                 {s.tag && <span className="es-card-tag">{s.tag}</span>}
+                <div className="es-card-image-wrap">
+                  <img src={s.image} alt={s.title} className="es-card-image" loading="lazy" />
+                </div>
                 <div className="es-card-icon-wrap">
                   <s.icon className="es-card-icon" />
                 </div>
@@ -440,6 +491,9 @@ function ServicesPage() {
             {services.map((s) => (
               <div className="es-grid-card" key={s.label}>
                 <span className="es-card-num">{s.label}</span>
+                <div className="es-card-image-wrap">
+                  <img src={s.image} alt={s.title} className="es-card-image" loading="lazy" />
+                </div>
                 <div className="es-card-icon-wrap">
                   <s.icon className="es-card-icon" />
                 </div>

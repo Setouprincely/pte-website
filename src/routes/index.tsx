@@ -26,8 +26,20 @@ import {
   Headphones,
   ChevronDown,
 } from "lucide-react";
-import heroImg from "@/assets/hero-student.jpg";
+import heroImg from "@/assets/hero-student-kN9VSV3.jpg";
 import successImg from "@/assets/success.jpg";
+import testScoreImg from "@/assets/test-score.jpg";
+import scoreOnLaptopImg from "@/assets/score-on-laptop-screen.jpg";
+import viewingResultsImg from "@/assets/viewing-results-on-screen.jpg";
+import writingOnPaperImg from "@/assets/writing-on-paper.jpg";
+import personWithFlagImg from "@/assets/person-with-flag.jpg";
+import countryFlagsImg from "@/assets/country-flags.jpg";
+import proof1Img from "@/assets/proof1.jpg";
+import proof2Img from "@/assets/proof2.jpg";
+import proof3Img from "@/assets/proof3.jpg";
+import proof4Img from "@/assets/proof4.jpg";
+import testimony1Img from "@/assets/testimony1.jpg";
+import testimony2Img from "@/assets/testimony2.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -57,6 +69,7 @@ const services = [
     title: "Obtain Verfied Score Card",
     desc: "Get a valid and fully verified PTE score with our trusted support services. We guide you through the entire process, ensuring accuracy, authenticity, and fast results. Whether you need a desired score with or without the exams, we make the journey smooth and reliable so you can confidently achieve your study or migration goals.",
     number: "01",
+    image: testScoreImg,
   },
   {
     icon: Target,
@@ -64,6 +77,7 @@ const services = [
     title: "Modify Old Scores",
     desc: "Full-length simulations with AI-graded results replicating the exact exam interface and scoring algorithm.",
     number: "02",
+    image: scoreOnLaptopImg,
   },
   {
     icon: Users,
@@ -71,6 +85,7 @@ const services = [
     title: "Leak Questions",
     desc: "Personalized sessions with certified PTE experts who have scored 90+ themselves.",
     number: "03",
+    image: viewingResultsImg,
   },
   {
     icon: Zap,
@@ -78,6 +93,7 @@ const services = [
     title: "Book Exam",
     desc: "Structured 2-week sprint programmes for students with urgent visa or university deadlines.",
     number: "04",
+    image: writingOnPaperImg,
   },
 ];
 
@@ -122,6 +138,7 @@ const testimonials = [
     country: "India",
     score: "58 → 82",
     weeks: "4 weeks",
+    image: testimony1Img,
     text: "The mock tests felt exactly like the real exam. My speaking score jumped 20 points. I'd tried two other courses before — nothing came close.",
   },
   {
@@ -130,6 +147,7 @@ const testimonials = [
     country: "Nigeria",
     score: "61 → 79+",
     weeks: "3 weeks",
+    image: testimony2Img,
     text: "Personalized coaching made all the difference. My coach identified exactly which question types were hurting my score. Worth every cent.",
   },
   {
@@ -138,9 +156,12 @@ const testimonials = [
     country: "China",
     score: "52 → 79",
     weeks: "3 weeks",
+    image: personWithFlagImg,
     text: "I was stuck for months. Their writing templates and speaking flow techniques unlocked my score instantly. I cannot recommend them highly enough.",
   },
 ];
+
+const proofs = [proof1Img, proof2Img, proof3Img, proof4Img];
 
 const accreditations = [
   "Official PTE Academic Preparation Partner",
@@ -559,6 +580,20 @@ function HomePage() {
         }
         .es-programme-card:hover { background: var(--navy); }
         .es-programme-card:hover::after { transform: scaleX(1); }
+        .es-prog-image-wrap {
+          margin: -40px -36px 24px;
+          height: 170px;
+          overflow: hidden;
+          border-bottom: 1px solid #E5E2DC;
+        }
+        .es-prog-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.4s ease;
+        }
+        .es-programme-card:hover .es-prog-image { transform: scale(1.05); }
 
         .es-prog-num {
           font-family: var(--font-serif);
@@ -701,10 +736,32 @@ function HomePage() {
 
         /* ── Countries strip ── */
         .es-countries-strip {
+          position: relative;
           background: var(--navy-light);
           border-top: 1px solid rgba(255,255,255,0.06);
           border-bottom: 1px solid rgba(255,255,255,0.06);
           padding: 20px 0;
+          overflow: hidden;
+        }
+        .es-countries-strip::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: rgba(10,15,30,0.65);
+          z-index: 1;
+        }
+        .es-countries-image {
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+        }
+        .es-countries-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          opacity: 0.6;
+          filter: saturate(0.9);
         }
         .es-countries-inner {
           max-width: 1280px;
@@ -713,6 +770,8 @@ function HomePage() {
           display: flex;
           align-items: center;
           gap: 32px;
+          position: relative;
+          z-index: 2;
         }
         .es-countries-label {
           font-size: 10px;
@@ -833,6 +892,19 @@ function HomePage() {
           background: var(--navy);
           border-color: transparent;
         }
+        .es-testi-photo-wrap {
+          width: 100%;
+          height: 170px;
+          border-radius: 2px;
+          overflow: hidden;
+          margin-bottom: 22px;
+        }
+        .es-testi-photo {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
 
         .es-testi-quote-icon { margin-bottom: 24px; }
         .es-testi-quote-icon svg { width: 24px; height: 24px; color: var(--gold); }
@@ -879,6 +951,53 @@ function HomePage() {
           margin-top: 4px;
         }
         .es-testi-card.featured .es-score-weeks { color: rgba(255,255,255,0.35); }
+
+        /* Proof Gallery */
+        .es-proof {
+          background: var(--cream);
+          border-top: 1px solid #E5E2DC;
+          border-bottom: 1px solid #E5E2DC;
+        }
+        .es-proof-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 36px;
+          margin-bottom: 36px;
+        }
+        @media (max-width: 768px) {
+          .es-proof-header { flex-direction: column; align-items: flex-start; }
+        }
+        .es-proof-note {
+          font-size: 14px;
+          line-height: 1.7;
+          color: #7A7570;
+          max-width: 440px;
+          margin: 0;
+        }
+        .es-proof-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 14px;
+        }
+        @media (max-width: 980px) {
+          .es-proof-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 560px) {
+          .es-proof-grid { grid-template-columns: 1fr; }
+        }
+        .es-proof-card {
+          background: #fff;
+          border: 1px solid #E5E2DC;
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .es-proof-img {
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+          display: block;
+        }
 
         /* ── Final CTA ── */
         .es-cta { background: var(--navy); position: relative; overflow: hidden; }
@@ -1135,6 +1254,9 @@ function HomePage() {
             <div className="es-programmes-grid">
               {services.map((s) => (
                 <div key={s.title} className="es-programme-card">
+                  <div className="es-prog-image-wrap">
+                    <img src={s.image} alt={s.title} className="es-prog-image" loading="lazy" />
+                  </div>
                   <div className="es-prog-num">{s.number}</div>
                   <div className="es-prog-tag">{s.tag}</div>
                   <div className="es-prog-icon"><s.icon /></div>
@@ -1216,6 +1338,9 @@ function HomePage() {
 
         {/* ─── COUNTRIES STRIP ──────────────────────────────────────── */}
         <div className="es-countries-strip">
+          <div className="es-countries-image">
+            <img src={countryFlagsImg} alt="Country flags representing global students" loading="lazy" />
+          </div>
           <div className="es-countries-inner">
             <span className="es-countries-label">Students from</span>
             <div className="es-countries-flags">
@@ -1293,6 +1418,9 @@ function HomePage() {
               {testimonials.map((t, i) => (
                 <div key={t.name} className={`es-testi-card ${i === 1 ? "featured" : ""}`}>
                   <div>
+                    <div className="es-testi-photo-wrap">
+                      <img src={t.image} alt={`${t.name} testimonial`} className="es-testi-photo" loading="lazy" />
+                    </div>
                     <div className="es-testi-quote-icon"><Quote /></div>
                     <p className="es-testi-text">{t.text}</p>
                   </div>
@@ -1317,6 +1445,32 @@ function HomePage() {
               <Link to="/testimonials" className="es-link-underline">
                 Read all 200+ student stories <ArrowRight />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── PROOF ───────────────────────────────────────── */}
+        <section className="es-section es-proof">
+          <div className="es-section-inner">
+            <div className="es-proof-header">
+              <div>
+                <div className="es-section-eyebrow">Proof</div>
+                <h2 className="es-section-heading">
+                  Verified Results.<br />
+                  <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Captured and Shared.</em>
+                </h2>
+              </div>
+              <p className="es-proof-note">
+                A selection of recent score evidence shared by our students after preparation and support.
+              </p>
+            </div>
+
+            <div className="es-proof-grid">
+              {proofs.map((proof, index) => (
+                <div className="es-proof-card" key={`proof-${index}`}>
+                  <img src={proof} alt={`PTE score proof ${index + 1}`} className="es-proof-img" loading="lazy" />
+                </div>
+              ))}
             </div>
           </div>
         </section>

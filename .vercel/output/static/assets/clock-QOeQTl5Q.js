@@ -1,1 +1,0 @@
-import{c}from"./SiteLayout-BQ7Lsgyd.js";const o=[["path",{d:"M7 7h10v10",key:"1tivn9"}],["path",{d:"M7 17 17 7",key:"1vkiza"}]],r=c("arrow-up-right",o);const t=[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M12 6v6l4 2",key:"mmk7yg"}]],a=c("clock",t);export{r as A,a as C};

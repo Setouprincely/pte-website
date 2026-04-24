@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Award, Heart, ShieldCheck, Sparkles, ArrowRight, Users, TrendingUp, Globe } from "lucide-react";
-import coachingImg from "@/assets/coaching.jpg";
+import immigrationImg from "@/assets/immigration.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -588,7 +588,7 @@ function AboutPage() {
           <div className="story">
             <div className="story-image-wrap">
               <img
-                src={coachingImg}
+                src={immigrationImg}
                 alt="PTE coach working with student"
                 className="story-img"
                 loading="lazy"
