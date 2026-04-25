@@ -28,9 +28,9 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-student-kN9VSV3.jpg";
 import successImg from "@/assets/success.jpg";
-import testScoreImg from "@/assets/test-score.jpg";
-import scoreOnLaptopImg from "@/assets/score-on-laptop-screen.jpg";
-import viewingResultsImg from "@/assets/viewing-results-on-screen.jpg";
+import testScoreImg from "@/assets/valid.jpg";
+import scoreOnLaptopImg from "@/assets/modify.jpg";
+import viewingResultsImg from "@/assets/leak.jpg";
 import writingOnPaperImg from "@/assets/writing-on-paper.jpg";
 import personWithFlagImg from "@/assets/person-with-flag.jpg";
 import countryFlagsImg from "@/assets/country-flags.jpg";
