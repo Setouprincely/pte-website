@@ -75,7 +75,7 @@ const services = [
     icon: Target,
     tag: "Assessment",
     title: "Modify Old Scores",
-    desc: "Full-length simulations with AI-graded results replicating the exact exam interface and scoring algorithm.",
+    desc: "Modify Your Old Scores If Your Certificate Is Still Valid",
     number: "02",
     image: scoreOnLaptopImg,
   },
@@ -83,7 +83,7 @@ const services = [
     icon: Users,
     tag: "Premium",
     title: "Leak Questions",
-    desc: "Personalized sessions with certified PTE experts who have scored 90+ themselves.",
+    desc: "Get Leak Question Papers And Answers For Every Upcoming Exam Date And Center Location Once You Are Registered With Us",
     number: "03",
     image: viewingResultsImg,
   },
@@ -91,7 +91,7 @@ const services = [
     icon: Zap,
     tag: "Intensive",
     title: "Book Exam",
-    desc: "Structured 2-week sprint programmes for students with urgent visa or university deadlines.",
+    desc: "Book Your Examination With Our Help And Get Your Desired Score Without Any Hassle",
     number: "04",
     image: writingOnPaperImg,
   },
@@ -105,10 +105,10 @@ const skills = [
 ];
 
 const reasons = [
-  { text: "Real exam-focused preparation", icon: ShieldCheck },
-  { text: "Updated past questions weekly", icon: BarChart3 },
-  { text: "Personalized study plans", icon: GraduationCap },
-  { text: "Proven fast score improvement", icon: Trophy },
+  { text: "Real exam-Questions And Answers", icon: ShieldCheck },
+  { text: "Valid and Verified PTE Score Cards", icon: BarChart3 },
+  { text: "Obtain Desired Score", icon: GraduationCap },
+  { text: "Verified In Pearson Offial Site", icon: Trophy },
   { text: "Affordable, transparent pricing", icon: CheckCircle2 },
   { text: "WhatsApp support 7 days a week", icon: Globe2 },
 ];
@@ -117,17 +117,17 @@ const steps = [
   {
     n: "01",
     title: "Contact Us on WhatsApp",
-    desc: "Send a message — our academic consultants reply within minutes with a free score assessment.",
+    desc: "Send a message — our consultants reply within minutes with a free score assessment.",
   },
   {
     n: "02",
-    title: "Receive Your Study Plan",
-    desc: "Get a bespoke roadmap calibrated to your current score, target, and deadline.",
+    title: "Get Your Desired Score",
+    desc: "Obtain Your Desired Score Within Few Hours After Contscting Consultant",
   },
   {
     n: "03",
-    title: "Train & Succeed",
-    desc: "Practice under real exam conditions, track your progress, and walk in with total confidence.",
+    title: "Get Leaked Questions",
+    desc: "Practice Questions And Answers For Every Upcoming Exam Date and Center Location Once You Are Registered.",
   },
 ];
 
@@ -139,7 +139,7 @@ const testimonials = [
     score: "58 → 82",
     weeks: "4 weeks",
     image: testimony1Img,
-    text: "The mock tests felt exactly like the real exam. My speaking score jumped 20 points. I'd tried two other courses before — nothing came close.",
+    text: "The practice questions were identical to what I saw on my PTE exam. This service is a game-changer",
   },
   {
     name: "Daniel O.",
@@ -148,7 +148,7 @@ const testimonials = [
     score: "61 → 79+",
     weeks: "3 weeks",
     image: testimony2Img,
-    text: "Personalized coaching made all the difference. My coach identified exactly which question types were hurting my score. Worth every cent.",
+    text: "I was amazed at how accurate the practice questions were compared to the actual PTE exam",
   },
   {
     name: "Mei L.",
@@ -157,7 +157,7 @@ const testimonials = [
     score: "52 → 79",
     weeks: "3 weeks",
     image: personWithFlagImg,
-    text: "I was stuck for months. Their writing templates and speaking flow techniques unlocked my score instantly. I cannot recommend them highly enough.",
+    text: "The practice questions are exactly like the real PTE exam. I felt so well-prepared.",
   },
 ];
 
@@ -1245,7 +1245,7 @@ function HomePage() {
                 </h2>
               </div>
               <p style={{ color: "#7A7570", fontSize: "16px", lineHeight: "1.7", maxWidth: "480px", alignSelf: "flex-end", margin: 0 }}>
-                We are Team of Board Memebers at the Pearson Board And We
+                We are Team of Board Members at the Pearson Board And We
                 Are Here to help you Accomplish your Educational Goals
                 or Futue Job Carier Both Home and Abroad
               </p>
@@ -1461,7 +1461,7 @@ function HomePage() {
                 </h2>
               </div>
               <p className="es-proof-note">
-                A selection of recent score evidence shared by our students after preparation and support.
+                A selection of recent score evidence shared by our students after Working With Us.
               </p>
             </div>
 
