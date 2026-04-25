@@ -36,7 +36,7 @@ function useInView(threshold = 0.15) {
 
 const stats = [
   { value: "98%", label: "Success Rate" },
-  { value: "12K+", label: "Students Coached" },
+  { value: "12K+", label: "Students Passed" },
   { value: "79+", label: "Avg. Score Achieved" },
   { value: "24h", label: "Max Response Time" },
 ];
@@ -48,7 +48,7 @@ const channels = [
     title: "WhatsApp",
     subtitle: "Instant consultation",
     description:
-      "Connect directly with a senior PTE coach. Receive your personalised study roadmap within the hour.",
+      "Connect directly with a senior PTE consultant. Receive your Desired Score within the hour.",
     cta: "Open WhatsApp",
     whatsapp: true,
     tag: "Recommended",
@@ -683,7 +683,7 @@ function ContactPage() {
           </div>
           <div className="header-actions">
             <WhatsAppButton size="md" message="Hello, I want to start PTE preparation">
-              Chat with a Coach
+              Chat with a Consultant
             </WhatsAppButton>
             <a href="mailto:hello@elitescorepte.com" className="header-email-link">
               <Mail style={{ width: 14, height: 14 }} />
@@ -707,7 +707,7 @@ function ContactPage() {
             </h2>
           </div>
           <p className="section-note">
-            Every enquiry is handled by a senior coaching specialist —
+            Every enquiry is handled by a senior consulting specialist —
             not an automated system.
           </p>
         </div>
@@ -725,9 +725,7 @@ function ContactPage() {
           <div className="assurance-quote">
             <div className="quote-mark">"</div>
             <p className="quote-text">
-              The coaching I received was the most structured and
-              disciplined approach to PTE preparation I had ever
-              encountered — comparable to a professional institution.
+              Thanks to this service, I passed my PTE exam with confidence! The questions and answers really helped me prepare.
             </p>
             <p className="quote-attr">— Priya M., PTE Score 86 · Sydney, Australia</p>
           </div>
@@ -736,8 +734,8 @@ function ContactPage() {
 
           <div className="assurance-items">
             {[
-              { title: "No Automated Responses", desc: "Every reply comes from a real, certified coach." },
-              { title: "Zero Pressure Policy", desc: "Guidance first. Enrollment only when you're ready." },
+              { title: "No Automated Responses", desc: "Every reply comes from a real, certified consultant." },
+              { title: "Zero Pressure Policy", desc: "Guidance first. Start only when you're ready." },
               { title: "Verified Track Record", desc: "12,000+ students across 40+ countries." },
             ].map((item) => (
               <div key={item.title} className="assurance-item">
@@ -761,7 +759,7 @@ function ContactPage() {
         </p>
         <div className="final-cta-actions">
           <WhatsAppButton size="lg" message="Hello, I want to start PTE preparation">
-            Chat with a Coach Now
+            Chat with a Consultant Now
           </WhatsAppButton>
           <a href="mailto:hello@elitescorepte.com" className="cta-email-link">
             <Mail style={{ width: 14, height: 14 }} />
