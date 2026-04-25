@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Award, Heart, ShieldCheck, Sparkles, ArrowRight, Users, TrendingUp, Globe } from "lucide-react";
-import immigrationImg from "@/assets/immigration.jpg";
+import immigrationImg from "@/assets/flagg.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

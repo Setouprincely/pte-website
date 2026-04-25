@@ -27,19 +27,19 @@ import {
   ChevronDown,
 } from "lucide-react";
 import heroImg from "@/assets/hero-student-kN9VSV3.jpg";
-import successImg from "@/assets/success.jpg";
+import whySectionVideo from "@/assets/video1.mp4";
 import testScoreImg from "@/assets/valid.jpg";
 import scoreOnLaptopImg from "@/assets/modify.jpg";
 import viewingResultsImg from "@/assets/leak.jpg";
 import writingOnPaperImg from "@/assets/writing-on-paper.jpg";
-import personWithFlagImg from "@/assets/person-with-flag.jpg";
+import neupaneImg from "@/assets/neupane.jpg";
 import countryFlagsImg from "@/assets/country-flags.jpg";
-import proof1Img from "@/assets/proof1.jpg";
-import proof2Img from "@/assets/proof2.jpg";
-import proof3Img from "@/assets/proof3.jpg";
-import proof4Img from "@/assets/proof4.jpg";
+import michelleStephaniaImg from "@/assets/michelle stephania.jpg";
+import photo6007971455796186377YImg from "@/assets/photo_6007971455796186377_y.jpg";
+import princyThomasImg from "@/assets/princy thomas.jpg";
 import testimony1Img from "@/assets/testimony1.jpg";
-import testimony2Img from "@/assets/testimony2.jpg";
+import michelleStephaniaPhotoImg from "@/assets/michelle stephania photo.jpg";
+import princyImg from "@/assets/Princy.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,35 +133,35 @@ const steps = [
 
 const testimonials = [
   {
-    name: "Priya S.",
+    name: "Neupane Hema.",
     flag: "🇮🇳",
     country: "India",
-    score: "58 → 82",
-    weeks: "4 weeks",
-    image: testimony1Img,
+    score: "58 → 70",
+    weeks: "2 hours",
+    image: neupaneImg,
     text: "The practice questions were identical to what I saw on my PTE exam. This service is a game-changer",
   },
   {
-    name: "Daniel O.",
-    flag: "🇳🇬",
-    country: "Nigeria",
-    score: "61 → 79+",
-    weeks: "3 weeks",
-    image: testimony2Img,
+    name: "Cabatas Maria Fe Sansan.",
+    flag: "PH",
+    country: "Philipines",
+    score: "61 → 85+",
+    weeks: "6 hours",
+    image: michelleStephaniaPhotoImg,
     text: "I was amazed at how accurate the practice questions were compared to the actual PTE exam",
   },
   {
-    name: "Mei L.",
-    flag: "🇨🇳",
-    country: "China",
-    score: "52 → 79",
-    weeks: "3 weeks",
-    image: personWithFlagImg,
+    name: "Princy Thomas.",
+    flag: "IN",
+    country: "India",
+    score: "52 → 77",
+    weeks: "4 hours",
+    image: princyImg,
     text: "The practice questions are exactly like the real PTE exam. I felt so well-prepared.",
   },
 ];
 
-const proofs = [proof1Img, proof2Img, proof3Img, proof4Img];
+const proofs = [michelleStephaniaImg, photo6007971455796186377YImg, princyThomasImg, testimony1Img];
 
 const accreditations = [
   "Official PTE Academic Preparation Partner",
@@ -671,7 +671,8 @@ function HomePage() {
         .es-why-image-wrap {
           position: relative;
         }
-        .es-why-image-wrap img {
+        .es-why-image-wrap img,
+        .es-why-image-wrap video {
           width: 100%;
           aspect-ratio: 4/3;
           object-fit: cover;
@@ -1285,7 +1286,15 @@ function HomePage() {
             <div className="es-why-grid">
               {/* Image */}
               <div className="es-why-image-wrap">
-                <img src={successImg} alt="Successful PTE Success Team students celebrating" />
+                <video
+                  src={whySectionVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  aria-label="PTE success showcase video"
+                />
 
                 <div className="es-why-badge-1">
                   <div style={{ fontFamily: "var(--font-serif)", fontSize: "2.8rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1 }}>99%</div>

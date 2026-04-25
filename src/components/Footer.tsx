@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { GraduationCap, Mail, Phone, Instagram, Facebook, Twitter } from "lucide-react";
-import { waLink } from "@/lib/whatsapp";
+import { GraduationCap, Mail, Instagram, Facebook, Twitter } from "lucide-react";
+import { waLink, WHATSAPP_DISPLAY_NUMBER } from "@/lib/whatsapp";
+import { CONTACT_EMAIL } from "@/lib/contact";
+import whatsappIcon from "@/assets/icon.jpg";
 
 export function Footer() {
   return (
@@ -12,7 +14,7 @@ export function Footer() {
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-gold text-gold-foreground">
                 <GraduationCap className="h-5 w-5" />
               </span>
-              EliteScore PTE
+              PTE Success Team
             </div>
             <p className="mt-4 max-w-sm text-sm text-primary-foreground/70">
               Helping ambitious students achieve their dream PTE scores with expert coaching,
@@ -34,15 +36,15 @@ export function Footer() {
             <h4 className="mb-4 font-display text-lg">Contact</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gold" />
+                <img src={whatsappIcon} alt="" aria-hidden="true" className="h-4 w-4 rounded-full object-cover" />
                 <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-gold">
-                  WhatsApp Us
+                  {WHATSAPP_DISPLAY_NUMBER}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gold" />
-                <a href="mailto:hello@elitescorepte.com" className="hover:text-gold">
-                  hello@elitescorepte.com
+                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-gold">
+                  {CONTACT_EMAIL}
                 </a>
               </li>
             </ul>
@@ -55,7 +57,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-primary-foreground/10 pt-6 text-xs text-primary-foreground/60 md:flex-row">
-          <p>© {new Date().getFullYear()} EliteScore PTE. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PTE Success Australia. All rights reserved.</p>
           <p>Crafted for ambitious learners worldwide.</p>
         </div>
       </div>

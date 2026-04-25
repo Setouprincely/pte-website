@@ -3,6 +3,8 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { MessageCircle, Mail, Clock, Globe, ArrowUpRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { WHATSAPP_DISPLAY_NUMBER } from "@/lib/whatsapp";
+import { CONTACT_EMAIL } from "@/lib/contact";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -49,7 +51,7 @@ const channels = [
     subtitle: "Instant consultation",
     description:
       "Connect directly with a senior PTE consultant. Receive your Desired Score within the hour.",
-    cta: "Open WhatsApp",
+    cta: WHATSAPP_DISPLAY_NUMBER,
     whatsapp: true,
     tag: "Recommended",
   },
@@ -60,8 +62,8 @@ const channels = [
     subtitle: "Formal enquiries",
     description:
       "For detailed program enquiries, institutional partnerships, or group enrollment requests.",
-    cta: "hello@elitescorepte.com",
-    href: "mailto:hello@elitescorepte.com",
+    cta: CONTACT_EMAIL,
+    href: `mailto:${CONTACT_EMAIL}`,
   },
   {
     index: "03",
@@ -685,9 +687,9 @@ function ContactPage() {
             <WhatsAppButton size="md" message="Hello, I want to start PTE preparation">
               Chat with a Consultant
             </WhatsAppButton>
-            <a href="mailto:hello@elitescorepte.com" className="header-email-link">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="header-email-link">
               <Mail style={{ width: 14, height: 14 }} />
-              hello@elitescorepte.com
+              {CONTACT_EMAIL}
             </a>
           </div>
         </div>
@@ -761,9 +763,9 @@ function ContactPage() {
           <WhatsAppButton size="lg" message="Hello, I want to start PTE preparation">
             Chat with a Consultant Now
           </WhatsAppButton>
-          <a href="mailto:hello@elitescorepte.com" className="cta-email-link">
+          <a href={`mailto:${CONTACT_EMAIL}`} className="cta-email-link">
             <Mail style={{ width: 14, height: 14 }} />
-            hello@elitescorepte.com
+            {CONTACT_EMAIL}
           </a>
         </div>
       </section>
