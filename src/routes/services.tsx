@@ -54,43 +54,43 @@ const services = [
   {
     icon: BookOpen,
     label: "03",
-    title: "Study Guides & Exam Strategies",
-    desc: "Proven templates and techniques for every section. Learn how top scorers consistently achieve 79+.",
+    title: "Modify Old Scores",
+    desc: "Modify Your Old Scores If Your Certificate Is Still Valid Which Is Verified On Official Pearson Site.",
     image: writingOnPaperImg,
   },
   {
     icon: GraduationCap,
     label: "04",
-    title: "One-on-One Coaching",
-    desc: "Personalized sessions with certified PTE experts delivering targeted feedback on all four skills.",
+    title: "One-on-One Chat With Our Consulant",
+    desc: "Personalized sessions with certified PTE experts To Help You Get Your Desired Score In Few Hours.",
     image: viewingResultsImg,
   },
   {
     icon: Users,
     label: "05",
-    title: "Group Classes",
-    desc: "High-energy live classes with peers working toward the same goal — affordable, structured, effective.",
+    title: "Accepted By Immigration",
+    desc: "Certificate Which Can Be Used For Visa Purposes.",
     image: personWithFlagImg,
   },
   {
     icon: TrendingUp,
     label: "06",
     title: "Score Improvement Plans",
-    desc: "We analyze your existing scorecard and build a precision plan to boost your lowest-scoring sections.",
+    desc: "We analyze your existing scorecard and boost your lowest-scoring sections.",
     image: immigrationImg,
   },
   {
     icon: Zap,
     label: "07",
-    title: "Express Preparation Programs",
-    desc: "Need 79+ in two weeks? Our intensive express track is engineered for ambitious deadlines.",
+    title: "Express Services",
+    desc: "Need 79+ in Few Hours? Our intensive express track is engineered for ambitious deadlines.",
     image: studyingImg,
   },
   {
     icon: CheckCircle2,
     label: "08",
-    title: "Score Guarantee Pathway",
-    desc: "Long-term coaching with a clear roadmap, weekly progress reviews, and accountability to your target score.",
+    title: "Score Guarantee",
+    desc: "You Have a 100% Guarantee To Achieve Your Desired Score and accountability to your target score.",
     image: countryFlagsImg,
   },
 ];
@@ -98,7 +98,7 @@ const services = [
 const stats = [
   { value: "94%", label: "Students Achieve Target Score" },
   { value: "12K+", label: "Questions in Our Bank" },
-  { value: "8,000+", label: "Students Coached" },
+  { value: "8,000+", label: "Students Who Succeeded" },
   { value: "4.9★", label: "Average Rating" },
 ];
 

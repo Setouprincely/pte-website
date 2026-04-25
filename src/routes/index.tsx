@@ -1285,7 +1285,7 @@ function HomePage() {
             <div className="es-why-grid">
               {/* Image */}
               <div className="es-why-image-wrap">
-                <img src={successImg} alt="Successful EliteScore PTE students celebrating" />
+                <img src={successImg} alt="Successful PTE Success Team students celebrating" />
 
                 <div className="es-why-badge-1">
                   <div style={{ fontFamily: "var(--font-serif)", fontSize: "2.8rem", fontWeight: 700, color: "var(--gold)", lineHeight: 1 }}>99%</div>
@@ -1305,7 +1305,7 @@ function HomePage() {
 
               {/* Content */}
               <div>
-                <div className="es-section-eyebrow">Why EliteScore</div>
+                <div className="es-section-eyebrow">Why PTE Success Australia</div>
                 <h2 className="es-section-heading">
                   A Premium Path<br />to Your<br />
                   <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Dream Score</em>

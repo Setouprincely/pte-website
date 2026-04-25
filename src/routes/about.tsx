@@ -18,13 +18,13 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   { icon: Award, title: "Excellence", desc: "We hold ourselves to the same standard we expect of you — 79+.", num: "01" },
-  { icon: Heart, title: "Care", desc: "Every student gets a personal plan and direct access to a coach.", num: "02" },
+  { icon: Heart, title: "Care", desc: "Every student gets their desired scores.", num: "02" },
   { icon: ShieldCheck, title: "Integrity", desc: "Real strategies. Real materials. Real scores. No shortcuts.", num: "03" },
   { icon: Sparkles, title: "Innovation", desc: "Constantly updated content based on the latest PTE patterns.", num: "04" },
 ];
 
 const stats = [
-  { value: "500+", label: "Students Coached", icon: Users },
+  { value: "500+", label: "Students Assisted", icon: Users },
   { value: "94%", label: "Score 79 or Above", icon: TrendingUp },
   { value: "12+", label: "Countries Represented", icon: Globe },
   { value: "8 Yrs", label: "Combined Expertise", icon: Award },
@@ -559,17 +559,17 @@ function AboutPage() {
           <div className="hero-glow" />
 
           <div className="hero-content">
-            <p className="hero-eyebrow">EliteScore PTE</p>
+            <p className="hero-eyebrow">PTE Success Team</p>
             <h1 className="hero-title">
               Precision.<br />
               <em>By Design.</em>
             </h1>
             <div className="hero-divider" />
             <p className="hero-sub">
-              We are a specialist PTE academic coaching institution — built on evidence, driven by outcomes, and trusted by ambitious candidates across twelve nations.
+              We are a specialist PTE academic Team— built on evidence, driven by outcomes, and trusted by ambitious candidates across twelve nations.
             </p>
             <WhatsAppButton className="hero-cta">
-              Speak to a Coach <ArrowRight size={14} />
+              Speak to a Consultant <ArrowRight size={14} />
             </WhatsAppButton>
           </div>
 
@@ -606,14 +606,14 @@ function AboutPage() {
                 <em>Single Frustration</em>
               </h2>
               <p className="story-body">
-                EliteScore PTE was established by a group of senior language coaches who witnessed, repeatedly, the same painful pattern: capable, intelligent candidates failing to reach their target scores — not from lack of ability, but from lack of direction.
+                PTE Success Team was established by a group of senior language coaches who witnessed, repeatedly, the same painful pattern: capable, intelligent candidates failing to reach their target scores — not from lack of ability, but from lack of direction.
               </p>
               <p className="story-body">
-                The PTE Academic is a precision instrument. Generic preparation yields generic results. We built this institution around the opposite principle: meticulous, tailored coaching aligned exactly to what the exam rewards.
+                This PTE Team is a precision instrument. Generic preparation yields generic results. We built this Team around the opposite principle: Updating Directly In Pearsons Database and aligned exactly to what the exam rewards.
               </p>
               <div className="story-rule" />
               <p className="story-body">
-                Today, EliteScore operates as a boutique centre of excellence — deliberately small, deliberately focused. Our students come seeking 79+. Our programme is engineered to take them there.
+                Today, PTE Success Team operates as a centre of excellence — deliberately small, deliberately focused. Our students come seeking 79+. Our programme is engineered to take them there.
               </p>
             </div>
           </div>
@@ -629,7 +629,7 @@ function AboutPage() {
               </h2>
             </div>
             <p style={{ fontSize: 14, fontWeight: 300, color: "var(--muted)", maxWidth: 380, lineHeight: 1.8, paddingBottom: 8 }}>
-              These are not aspirations. They are the operating standards by which every coach, every session, and every resource is measured.
+              These are not aspirations. They are the operating standards by which We Provide Your Dream Score With little or No Stress, and every resource is measured.
             </p>
           </div>
 
